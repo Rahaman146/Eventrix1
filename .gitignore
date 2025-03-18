@@ -3,7 +3,7 @@ node_modules/
 
 # Ignore build files
 dist/
-build/
+build/-
 
 # Ignore other common folders
 .vscode/
