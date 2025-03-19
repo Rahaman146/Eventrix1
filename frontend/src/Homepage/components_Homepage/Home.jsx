@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "./Logo";
 import Body from "./Body";
+import Logo_main from "./Logo_main";
 
 function Home() {
     return (
         <div className="homepage_main-div-0">
-            <Logo />
+            <Logo_main />
             <Body />
         </div>
     );

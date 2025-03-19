@@ -3,7 +3,7 @@ import Left_Logo from "./Logo/Left_Logo";
 import Middle_Logo from "./Logo/Middle_Logo";
 import Right_Logo from "./Logo/Right_Logo";
 
-function Logo() {
+function Logo_main() {
     return (<div className="homepage_logo-div-01">
         <div className="homepage_logo-div-11">
             <div className="homepage_logo-div-2">
@@ -16,4 +16,4 @@ function Logo() {
         </div>
     </div>);
 }
-export default Logo;
+export default Logo_main;

@@ -232,6 +232,7 @@ p {
   color: black;
   font-size: 1rem;
   line-height: 1.6;
+  border-radius: 5px;
 }
 
 
@@ -343,6 +344,7 @@ p {
   background-color: #f0f0f0;
 }
 
+
 /* Loginpage css extra */
 
 .main-div-login {
@@ -412,7 +414,7 @@ p {
   padding-right: 5%;
   padding-left: 5%;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .password_login {
@@ -442,4 +444,26 @@ p {
 
 .noaccount_login-1 {
   text-align: center;
+}
+
+.login_message {
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 300px;
+  display: block;
+}
+
+.login_message-error {
+  background-color: #ffe5e5;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.login_message-success {
+  background-color: #e5ffe5;
+  color: #007f00;
+  border: 1px solid #007f00;
 }

@@ -274,3 +274,50 @@ a {
     background-color: #474a4a;
     transform: scale(1.1);
 }
+
+/* additional css */
+
+.homepage_form_input {
+    height: auto;
+    width: 40%;
+    display: block;
+    border: 1px solid #cccccc;
+    margin-bottom: 0px;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-radius: 5px;
+}
+
+input {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    cursor: text;
+}

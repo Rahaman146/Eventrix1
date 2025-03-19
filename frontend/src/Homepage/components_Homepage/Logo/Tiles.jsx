@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Tiles(props) {
-    return (<a href={props.href} className="homepage_tiles">
+    const navigate = useNavigate();
+
+    return (<a onClick={() => navigate(props.navigate)} style={{ cursor: "pointer", color: "black", textDecoration: "none" }} className="homepage_tiles">
         {props.content}
     </a>);
 }
