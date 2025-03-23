@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+* {
+  transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
 .image {
   width: 100%;
   height: 100%;
@@ -10,7 +14,11 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
+}
+
+.App {
+  height: 100%;
 }
 
 form {
@@ -23,6 +31,7 @@ div {
   display: block;
   unicode-bidi: isolate;
 }
+
 
 label {
   display: block;
@@ -42,19 +51,18 @@ input {
 }
 
 .main_wrapper_signin-0 {
-  background-color: white;
+  background-color: #08080D;
   color: white;
-  background-color: white;
   font-family: system-ui;
-  color: black;
   font-size: 1rem;
   line-height: 1.5;
-
+  height: 100%;
 }
 
 .main_wrapper_signin-1 {
   padding-right: 5%;
   padding-left: 5%;
+  height: 100%;
 }
 
 .main_wrapper_signin-2 {
@@ -128,7 +136,7 @@ input {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: transparent;
-  background-color: transparent;
+  background-color: hsla(0, 0.00%, 0.00%, 0.00);
   text-align: center;
 }
 
@@ -203,9 +211,6 @@ p {
 
 .signup_form_input {
   height: auto;
-  width: 100%;
-  display: block;
-  border: 1px solid #cccccc;
   min-height: 2.75rem;
   margin-bottom: 0px;
   padding-top: 0.5rem;
@@ -214,27 +219,40 @@ p {
   padding-left: 0.75rem;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: black;
+  border-top-color: transparent;
   border-right-style: solid;
   border-right-width: 1px;
-  border-right-color: black;
+  border-right-color: transparent;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: black;
+  border-bottom-color: transparent;
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: black;
+  border-left-color: transparent;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-color: white;
-  color: black;
+  background-color: color-mix(in srgb, #08080D, transparent 95%);
+  backdrop-filter: blur(10px);
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  color: #08080D;
   font-size: 1rem;
   line-height: 1.6;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 12px;
 }
 
+.signup_form_input-1 {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  background-color: color-mix(in srgb, #FFFFFF, transparent 90%);
+  color: white;
+}
 
 .signup_form-button-wrapper {
   display: grid;
@@ -246,26 +264,38 @@ p {
 }
 
 .signup_button {
+  display: flex;
   padding-top: 0.75rem;
   padding-right: 1.5rem;
   padding-bottom: 0.75rem;
   padding-left: 1.5rem;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: black;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: black;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: black;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: black;
-  background-color: black;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  background-color: white;
+  box-shadow: inset 0 -2px 1px 0 hsla(0, 0.00%, 0.00%, 0.20), inset 0 32px 24px 0 hsla(0, 0.00%, 100.00%, 0.05), inset 0 1px 1px 1px hsla(0, 0.00%, 100.00%, 0.25), inset 0 0 0 1px color-mix(in srgb, #08080D, transparent 85%), 0 1px 2px 0 color-mix(in srgb, #08080D, transparent 95%);
+  transition-property: transform, box-shadow, background-color;
+  transition-duration: 200ms, 200ms, 200ms;
+  transition-timing-function: ease, ease, ease;
   color: white;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
+  text-transform: none;
+  border-radius: 100px;
+}
+
+.signup_button1-1 {
+  background-color: color-mix(in srgb, #FFFFFF, transparent 90%);
+  box-shadow: 0 1px 2px 0 color-mix(in srgb, #08080D, transparent 95%), inset 0 -2px 1px 0 color-mix(in srgb, #08080D, transparent 95%), inset 0 0 0 1px color-mix(in srgb, #FFFFFF, transparent 90%);
+  backdrop-filter: blur(100px);
+  color: white;
+}
+
+.signup_button-1 {
+  background-color: white;
+  color: #08080D;
 }
 
 .signup_is-icon {
@@ -279,11 +309,6 @@ p {
 .signup_max-width-full {
   width: 100%;
   max-width: none;
-}
-
-.signup_is-secondary {
-  background-color: transparent;
-  color: black;
 }
 
 .Subbutton1png {
@@ -319,16 +344,26 @@ p {
 .hover-button {
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
-  background-color: #000000;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .hover-button:hover {
-  background-color: #474a4a;
+  background-color: #272929;
+  transform: scale(1.1);
+}
+
+.hover-button-0 {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hover-button-0:hover {
+  background-color: #c7c9c9;
   transform: scale(1.1);
 }
 
@@ -341,7 +376,7 @@ p {
 .tab-anim:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #f0f0f0;
+  background-color: #2e2d2d;
 }
 
 
@@ -361,6 +396,8 @@ p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   height: 100vh;
+  background-color: #202025;
+  color: white;
 }
 
 .U_login_component {
@@ -432,7 +469,6 @@ p {
 }
 
 .password_login-2 {
-  color: #000000;
   text-decoration: underline;
 }
 
@@ -446,24 +482,114 @@ p {
   text-align: center;
 }
 
+/* Message Styling */
 .login_message {
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 14px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
   text-align: center;
-  max-width: 300px;
-  display: block;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards, fadeOut 0.5s 2.5s forwards;
 }
 
+/* Error Message */
 .login_message-error {
-  background-color: #ffe5e5;
-  color: #000000;
-  border: 1px solid #000000;
+  background-color: #ff4d4f;
+  color: white;
+  border: 1px solid #ff7875;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.6);
 }
 
+/* Success Message */
 .login_message-success {
-  background-color: #e5ffe5;
-  color: #007f00;
-  border: 1px solid #007f00;
+  background-color: #52c41a;
+  color: white;
+  border: 1px solid #73d13d;
+  box-shadow: 0 0 8px rgba(82, 196, 26, 0.6);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* forgotpassword css extra */
+
+.forgot-password-wrapper {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #202025;
+  color: white;
+  height: 100vh;
+}
+
+.forgot-password,
+.reset-password {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.forgot-password h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 25%;
+  align-self: center;
+}
+
+.forgot-password input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.forgot-password button {
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  align-self: center;
+}
+
+.forgot-password p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgotpassword-message {
+  align-self: center;
+  max-width: 30%;
+  justify-self: center;
 }
