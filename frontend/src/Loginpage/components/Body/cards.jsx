@@ -1,13 +1,13 @@
 import React from "react";
 
-function Cards({ title, value, onChange }) {
+function Cards({ title, placeholder, value, onChange }) {
     return (
         <div className="signup_form_field-wrapper">
             <label className="signup_form_field-label">{title}</label>
             <input
-                className="signup_form_input"
+                className="signup_form_input signup_form_input-1"
                 type="text"
-                placeholder={title}
+                placeholder={placeholder}
                 value={value}
                 onChange={onChange}
             />

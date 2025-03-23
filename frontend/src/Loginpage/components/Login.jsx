@@ -8,7 +8,6 @@ import Logo_main from "../../Homepage/components_Homepage/Logo_main";
 function Login() {
     return (
         <div>
-            <Logo_main />
             <div className="main-div-login">
                 <Logo_login />
                 <Body_login />
