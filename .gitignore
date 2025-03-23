@@ -8,3 +8,4 @@ build/-
 # Ignore other common folders
 .vscode/
 .DS_Store
+".env" 
